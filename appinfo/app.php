@@ -48,6 +48,7 @@ use OCA\AnnouncementCenter\NotificationsNotifier;
 \OC::$server->getNotificationManager()->registerNotifier(function() {
 	return new NotificationsNotifier(
 		new Manager(\OC::$server->getDatabaseConnection()),
-		\OC::$server->getL10NFactory()
+		\OC::$server->getL10NFactory(),
+		\OC::$server->getUserManager()
 	);
 });
