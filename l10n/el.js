@@ -14,6 +14,7 @@ OC.L10N.register(
     "There are currently no announcements…" : "Δεν υπάρχουν ακόμη ανακοινώσεις...",
     "Add announcement" : "Προσθήκη ανακοίνωσης",
     "Subject…" : "Θέμα...",
-    "Your announcement…" : "Η ανακοίνωσή σας..."
+    "Your announcement…" : "Η ανακοίνωσή σας...",
+    "Announce" : "Ανακοίνωσε"
 },
 "nplurals=2; plural=(n != 1);");
