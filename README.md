@@ -1,8 +1,7 @@
 # Announcement Center
 
-An Announcement Center app for ownCloud
-
-This app allows administrators to post announcements
+An Announcement Center app for ownCloud (allows administrators to publish announcements for users)  
+Depends on ['notifications'](https://github.com/owncloud/notifications) backend
 
 ## QA metrics on master branch:
 
