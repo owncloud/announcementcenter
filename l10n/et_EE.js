@@ -15,6 +15,6 @@ OC.L10N.register(
     "Add announcement" : "Lisa teadaanne",
     "Subject…" : "Pealkiri...",
     "Your announcement…" : "Sinu teadaanne...",
-    "Announce" : "teavita"
+    "Announce" : "Teavita"
 },
 "nplurals=2; plural=(n != 1);");
