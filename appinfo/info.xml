@@ -2,13 +2,16 @@
 <info>
 	<id>announcementcenter</id>
 	<name>Announcement Center</name>
-	<description>An announcement center for ownCloud</description>
+	<summary>Send notifications to all users</summary>
+	<description>This application enables admins to notify users about e.g. upcoming maintenance windows or changed features. Notifications are sent via Activity mails, the notification bell in the WebUI and ownCloud clients display them as well.</description>
 	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
 	<version>1.2.0</version>
 	<namespace>AnnouncementCenter</namespace>
 
-	<category>other</category>
+	<category>tools</category>
+	<screenshot>https://raw.githubusercontent.com/owncloud/promo/e1dd604d66b4c5f765579b4c160de3268169ea3c/ownCloud%20logo%20square.png</screenshot>
+
 	<website>https://github.com/owncloud/announcementcenter</website>
 	<bugs>https://github.com/owncloud/announcementcenter/issues</bugs>
 	<repository type="git">https://github.com/owncloud/announcementcenter.git</repository>
@@ -16,5 +19,8 @@
 	<dependencies>
 		<owncloud min-version="10.0" max-version="10.0" />
 	</dependencies>
-	<ocsid>173921</ocsid>
+	<navigation>
+		<route>announcementcenter.page.index</route>
+		<order>10</order>
+	</navigation>
 </info>
