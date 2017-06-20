@@ -78,10 +78,15 @@ class Notifier implements INotifier {
 				$announcement = $this->manager->getAnnouncement($notification->getObjectId(), false);
 				$params[] = str_replace("\n", ' ', $announcement['subject']);
 
-				$notification->setParsedMessage($announcement['message'])
-					->setParsedSubject(
+				// only set message if present
+				if(!empty($announcement['message'])) {
+					$notification->setParsedMessage($announcement['message']);
+				}
+
+				$notification->setParsedSubject(
 						(string) $l->t('%1$s announced “%2$s”', $params)
 					);
+
 				return $notification;
 
 			default:
