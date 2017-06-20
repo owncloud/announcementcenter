@@ -85,38 +85,6 @@ class AppTest extends TestCase {
 		parent::tearDown();
 	}
 
-	public function testAppNavigation() {
-		$this->navigationManager->expects($this->once())
-			->method('add')
-			->willReturnCallback(function($closure) {
-				$this->assertInstanceOf('\Closure', $closure);
-				$navigation = $closure();
-				$this->assertInternalType('array', $navigation);
-				$this->assertCount(5, $navigation);
-				$this->assertSame([
-					'id' => 'announcementcenter',
-					'order' => 10,
-					'href' => '/apps/announcementcenter/announcement',
-					'icon' => '/apps/announcementcenter/img/announcementcenter.svg',
-					'name' => 'Announcements',
-					], $navigation);
-			});
-		$this->urlGenerator->expects($this->once())
-			->method('linkToRoute')
-			->with('announcementcenter.page.index')
-			->willReturn('/apps/announcementcenter/announcement');
-		$this->urlGenerator->expects($this->once())
-			->method('imagePath')
-			->with('announcementcenter', 'announcementcenter.svg')
-			->willReturn('/apps/announcementcenter/img/announcementcenter.svg');
-		$this->languageFactory->expects($this->once())
-			->method('get')
-			->with('announcementcenter')
-			->willReturn($this->language);
-
-		include(__DIR__ . '/../../appinfo/app.php');
-	}
-
 	public function testAppActivity() {
 		$this->activityManager->expects($this->once())
 			->method('registerExtension')
