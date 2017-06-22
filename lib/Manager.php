@@ -171,6 +171,7 @@ class Manager {
 	 * @return string
 	 */
 	protected function parseMessage($message) {
+		return $message;
 		return str_replace("\n", '<br />', str_replace(['<', '>'], ['&lt;', '&gt;'], $message));
 	}
 

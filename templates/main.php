@@ -3,6 +3,7 @@
  * @var array $_
  * @var \OCP\IL10N $l
  */
+script('announcementcenter', 'vendor/showdown/dist/showdown');
 script('announcementcenter', 'script');
 style('announcementcenter', 'style');
 ?>

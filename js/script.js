@@ -37,7 +37,7 @@
 					'{{/if}}' +
 				'</em>' +
 				'{{#if message}}' +
-					'<br /><br /><p>{{{message}}}</p>' +
+					'<br /><br /><p>{{md message}}</p>' +
 				'{{/if}}' +
 			'</div>' +
 			'<hr />',
@@ -45,6 +45,16 @@
 		init: function() {
 			this.$container = $('#app-content-wrapper');
 			this.$content = $('#app-content');
+			Handlebars.registerHelper('md', function(text){
+				var converter =  new showdown.Converter({
+					strikethrough: true,
+					tables : true,
+					tasklists : true
+				});
+				return new Handlebars.SafeString(
+					converter.makeHtml(text)
+				);
+			});
 			this.compiledTemplate = Handlebars.compile(this.handlebarTemplate);
 
 			$('#submit_announcement').on('click', _.bind(this.postAnnouncement, this));
@@ -126,6 +136,7 @@
 			}).done(function (response) {
 				if (response.length > 0) {
 					_.each(response, function (announcement) {
+
 						var $html = $(self.compiledTemplate({
 							time: OC.Util.formatDate(announcement.time * 1000),
 							author: announcement.author,
