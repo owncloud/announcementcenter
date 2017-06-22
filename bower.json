@@ -1,0 +1,23 @@
+{
+  "name": "announcementcenter",
+  "homepage": "https://github.com/owncloud/announcementcenter",
+  "authors": [
+    "Thomas Müller <thomas.mueller@tmit.eu>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "AGPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "showdown": "^1.7.1"
+  }
+}
