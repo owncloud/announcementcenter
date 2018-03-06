@@ -2,7 +2,7 @@ OC.L10N.register(
     "announcementcenter",
     {
     "Announcements" : "Anuncios",
-    "Delete" : "Borrar",
+    "Delete" : "Eliminar",
     "Announcing…" : "Anunciando...",
     "Announced!" : "Anunciado!",
     "Announcement does not exist anymore" : "El anuncio no existe más",
