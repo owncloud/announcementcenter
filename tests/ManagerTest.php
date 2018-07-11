@@ -63,14 +63,14 @@ class ManagerTest extends TestCase {
 	 * @expectedCode 1
 	 */
 	public function testAnnounceSubjectTooLong() {
-		$this->manager->announce(str_repeat('a', 513), '', '', 0);
+		$this->manager->announce(\str_repeat('a', 513), '', '', 0);
 	}
 
 	public function testAnnouncement() {
 		$subject = 'subject' . "\n<html>";
 		$message = 'message' . "\n<html>";
 		$author = 'author';
-		$time = time() - 10;
+		$time = \time() - 10;
 
 		$announcement = $this->manager->announce($subject, $message, $author, $time);
 		$this->assertInternalType('int', $announcement['id']);

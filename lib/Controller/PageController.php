@@ -126,7 +126,7 @@ class PageController extends Controller {
 	 * @return JSONResponse
 	 */
 	public function add($subject, $message) {
-		$timeStamp = time();
+		$timeStamp = \time();
 		try {
 			$announcement = $this->manager->announce($subject, $message, $this->userId, $timeStamp);
 		} catch (\InvalidArgumentException $e) {

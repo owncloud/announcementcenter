@@ -31,7 +31,7 @@ class Manager {
 	/**
 	 * @param IDBConnection $connection
 	 */
-	public function __construct(IDBConnection $connection){
+	public function __construct(IDBConnection $connection) {
 		$this->connection = $connection;
 	}
 
@@ -45,8 +45,8 @@ class Manager {
 	 * @throws \InvalidArgumentException when the subject is empty or invalid
 	 */
 	public function announce($subject, $message, $user, $time, $parseStrings = true) {
-		$subject = trim($subject);
-		$message = trim($message);
+		$subject = \trim($subject);
+		$message = \trim($message);
 		if (isset($subject[512])) {
 			throw new \InvalidArgumentException('Invalid subject', 1);
 		}
@@ -149,7 +149,6 @@ class Manager {
 
 		$result = $query->execute();
 
-
 		$announcements = [];
 		while ($row = $result->fetch()) {
 			$announcements[] = [
@@ -162,7 +161,6 @@ class Manager {
 		}
 		$result->closeCursor();
 
-
 		return $announcements;
 	}
 
@@ -171,7 +169,7 @@ class Manager {
 	 * @return string
 	 */
 	protected function parseMessage($message) {
-		return str_replace("\n", '<br />', str_replace(['<', '>'], ['&lt;', '&gt;'], $message));
+		return \str_replace("\n", '<br />', \str_replace(['<', '>'], ['&lt;', '&gt;'], $message));
 	}
 
 	/**
@@ -179,6 +177,6 @@ class Manager {
 	 * @return string
 	 */
 	protected function parseSubject($subject) {
-		return str_replace("\n", ' ', str_replace(['<', '>'], ['&lt;', '&gt;'], $subject));
+		return \str_replace("\n", ' ', \str_replace(['<', '>'], ['&lt;', '&gt;'], $subject));
 	}
 }

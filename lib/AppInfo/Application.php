@@ -29,11 +29,11 @@ use OCP\IUser;
 use OCP\IUserSession;
 
 class Application extends App {
-	public function __construct (array $urlParams = array()) {
+	public function __construct(array $urlParams = []) {
 		parent::__construct('announcementcenter', $urlParams);
 		$container = $this->getContainer();
 
-		$container->registerService('PageController', function(IContainer $c) {
+		$container->registerService('PageController', function (IContainer $c) {
 			/** @var \OC\Server $server */
 			$server = $c->query('ServerContainer');
 

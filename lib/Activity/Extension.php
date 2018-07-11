@@ -94,7 +94,7 @@ class Extension implements IExtension {
 		if ($app === 'announcementcenter') {
 			$l = $this->languageFactory->get('announcementcenter', $languageCode);
 
-			list(, $id) = explode('#', $text);
+			list(, $id) = \explode('#', $text);
 
 			try {
 				$announcement = $this->manager->getAnnouncement($id, true);
@@ -102,7 +102,7 @@ class Extension implements IExtension {
 				return (string) $l->t('Announcement does not exist anymore', $params);
 			}
 
-			if (strpos($text, 'announcementmessage#') === 0) {
+			if (\strpos($text, 'announcementmessage#') === 0) {
 				return $announcement['message'];
 			}
 
@@ -110,7 +110,7 @@ class Extension implements IExtension {
 
 			try {
 				if ($announcement['author'] === $this->activityManager->getCurrentUserId()) {
-					array_shift($params);
+					\array_shift($params);
 					return (string) $l->t('You announced %s', $params);
 				}
 			} catch (\UnexpectedValueException $e) {
@@ -134,7 +134,7 @@ class Extension implements IExtension {
 	 * @return array|false
 	 */
 	public function getSpecialParameterList($app, $text) {
-		if ($app === 'announcementcenter'&& strpos($text, 'announcementsubject#') === 0) {
+		if ($app === 'announcementcenter'&& \strpos($text, 'announcementsubject#') === 0) {
 			return [
 				0 => 'username',
 			];
@@ -183,7 +183,7 @@ class Extension implements IExtension {
 	 * @return array|false
 	 */
 	public function filterNotificationTypes($types, $filter) {
-		if (in_array($filter, ['all', 'by', 'self'])) {
+		if (\in_array($filter, ['all', 'by', 'self'])) {
 			$types[] = 'announcementcenter';
 			return $types;
 		}

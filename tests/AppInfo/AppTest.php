@@ -64,8 +64,8 @@ class AppTest extends TestCase {
 			->getMock();
 		$this->language->expects($this->any())
 			->method('t')
-			->willReturnCallback(function($string, $args) {
-				return vsprintf($string, $args);
+			->willReturnCallback(function ($string, $args) {
+				return \vsprintf($string, $args);
 			});
 
 		$this->overwriteService('NavigationManager', $this->navigationManager);
@@ -88,7 +88,7 @@ class AppTest extends TestCase {
 	public function testAppActivity() {
 		$this->activityManager->expects($this->once())
 			->method('registerExtension')
-			->willReturnCallback(function($closure) {
+			->willReturnCallback(function ($closure) {
 				$this->assertInstanceOf('\Closure', $closure);
 				$navigation = $closure();
 				$this->assertInstanceOf('\OCA\AnnouncementCenter\Activity\Extension', $navigation);
@@ -105,7 +105,7 @@ class AppTest extends TestCase {
 
 		$this->notificationManager->expects($this->once())
 			->method('registerNotifier')
-			->willReturnCallback(function($closureNotifier, $closureInfo) {
+			->willReturnCallback(function ($closureNotifier, $closureInfo) {
 				$this->assertInstanceOf('\Closure', $closureNotifier);
 				$notifier = $closureNotifier();
 				$this->assertInstanceOf('\OCA\AnnouncementCenter\Notification\Notifier', $notifier);
