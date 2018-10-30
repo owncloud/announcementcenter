@@ -1,5 +1,7 @@
 <?php
 
+require_once 'vendor/owncloud/coding-standard/src/Config.php';
+
 $config = new OC\CodingStandard\Config();
 
 $config
