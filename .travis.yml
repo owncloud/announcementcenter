@@ -45,11 +45,6 @@ script:
   - cd tests/
   - sh -c "if [ '$JSTESTS' != '1' -a '$CODECHECK' != '1' -a '$CODECHECK' != '2' ]; then ../../../lib/composer/bin/phpunit --configuration phpunit.xml; fi"
 
-  # Create coverage report
-  - sh -c "if [ '$JSTESTS' != '1' -a '$CODECHECK' != '1' -a '$CODECHECK' != '2' ]; then wget https://scrutinizer-ci.com/ocular.phar; fi"
-  - sh -c "if [ '$JSTESTS' != '1' -a '$CODECHECK' != '1' -a '$CODECHECK' != '2' ]; then php ocular.phar code-coverage:upload --format=php-clover clover.xml; fi"
-  - cd ../
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
