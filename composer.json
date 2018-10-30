@@ -10,6 +10,23 @@
     },
     "require-dev": {
         "owncloud/coding-standard": "^1.0",
-        "jakub-onderka/php-parallel-lint": "^1.0"
-    }
-}
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "tm/tooly-composer-script": "^1.2"
+    },
+    "scripts": {
+        "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
+        "post-update-cmd": "Tooly\\ScriptHandler::installPharTools"
+    },
+    "extra": {
+        "tools": {
+            "php-cs-fixer": {
+                "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.13.1/php-cs-fixer.phar"
+            },
+            "phpstan": {
+                "url": "https://github.com/phpstan/phpstan/releases/download/0.10.5/phpstan.phar"
+            },
+            "phan": {
+                "url": "https://github.com/phan/phan/releases/download/1.1.1/phan.phar"
+            }
+        }
+    }}

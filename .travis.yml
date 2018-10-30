@@ -33,7 +33,7 @@ script:
   - cd apps/$APP_NAME/
   - ../../build/composer.phar install
   - vendor/bin/parallel-lint  --exclude vendor .
-  - vendor/bin/php-cs-fixer fix --allow-risky yes --dry-run -v --diff --diff-format udiff
+  - vendor/bin/php-cs-fixer.phar fix --allow-risky yes --dry-run -v --diff --diff-format udiff
 
   # Test the app
   - cd ../../
