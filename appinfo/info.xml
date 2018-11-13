@@ -17,7 +17,7 @@
 	<repository type="git">https://github.com/owncloud/announcementcenter.git</repository>
 
 	<dependencies>
-		<owncloud min-version="10.0" max-version="10.1" />
+		<owncloud min-version="10" max-version="10" />
 	</dependencies>
 	<navigation>
 		<route>announcementcenter.page.index</route>

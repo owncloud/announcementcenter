@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ## [1.2.1]
 ### Added
-- Set max-version to 10.1 because platform switches to semver - [#93](https://github.com/owncloud/announcementcenter/pull/93)
+- Set max-version to 10 because platform switches to semver
 - PHP 7.2 compatibility - [#100](https://github.com/owncloud/announcementcenter/pull/100)
 
 ## [1.2.0]
@@ -15,6 +15,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ### Fixed
 - Allow announcements without messages - [#86](https://github.com/owncloud/announcementcenter/pull/86)
 
-[1.2.1]: https://github.com/owncloud/announcementcenter/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/owncloud/announcementcenter/compare/v1.2.0...v1.1.2
+[1.2.1]: https://github.com/owncloud/announcementcenter/compare/v1.2.1...master
+[1.2.0]: https://github.com/owncloud/announcementcenter/compare/v1.2.0...v1.2.1
 
