@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<phpunit bootstrap="bootstrap.php"
+<phpunit bootstrap="../../tests/bootstrap.php"
 		 strict="true"
 		 verbose="true"
 		 timeoutForSmallTests="900"
 		 timeoutForMediumTests="900"
 		 timeoutForLargeTests="900"
 		>
-	<testsuite name='ownCloud - Announcement Center App Tests'>
-		<directory suffix='Test.php'>.</directory>
+	<testsuite name='unit'>
+		<directory suffix='Test.php'>./tests</directory>
 	</testsuite>
 	<!-- filters for code coverage -->
 	<filter>
 		<whitelist>
-			<directory suffix=".php">../../announcementcenter/appinfo</directory>
-			<directory suffix=".php">../../announcementcenter/lib</directory>
+			<directory suffix=".php">./appinfo</directory>
+			<directory suffix=".php">./lib</directory>
 		</whitelist>
 	</filter>
 	<logging>
 		<!-- and this is where your report will be written -->
-		<log type="coverage-clover" target="./clover.xml"/>
+		<log type="coverage-clover" target="./tests/output/clover.xml"/>
 	</logging>
 </phpunit>
 
