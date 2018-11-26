@@ -53,6 +53,16 @@ nbproject
 # Tests - auto-generated files
 /tests/coverage*
 /tests/clover.xml
+/tests/output/clover.xml
 /tests/js/node_modules
+/tests/output/
 
 build
+
+.php_cs.cache
+
+# Composer
+composer.phar
+vendor/
+vendor-bin/**/composer.lock
+vendor-bin/**/vendor
