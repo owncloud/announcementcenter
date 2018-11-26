@@ -21,7 +21,6 @@
 
 namespace OCA\AnnouncementCenter\Tests\AppInfo;
 
-
 use OCA\AnnouncementCenter\AppInfo\Application;
 use OCA\AnnouncementCenter\Tests\TestCase;
 
@@ -50,9 +49,9 @@ class ApplicationTest extends TestCase {
 	}
 
 	public function dataContainerQuery() {
-		return array(
-			array('PageController', 'OCA\AnnouncementCenter\Controller\PageController'),
-		);
+		return [
+			['PageController', 'OCA\AnnouncementCenter\Controller\PageController'],
+		];
 	}
 
 	/**

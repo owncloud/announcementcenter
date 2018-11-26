@@ -122,7 +122,6 @@ class BackgroundJobTest extends TestCase {
 		}
 
 		$this->invokePrivate($job, 'run', [['id' => $id]]);
-
 	}
 
 	protected function getUserMock($uid, $displayName) {
@@ -212,7 +211,7 @@ class BackgroundJobTest extends TestCase {
 		$this->userManager->expects($this->once())
 			->method('callForAllUsers')
 			->with($this->anything(), '')
-			->willReturnCallback(function($callback) {
+			->willReturnCallback(function ($callback) {
 				$users = [
 					$this->getUserMock('author', 'User One'),
 					$this->getUserMock('u2', 'User Two'),
