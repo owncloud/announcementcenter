@@ -21,13 +21,13 @@
 
 $app = new \OCA\AnnouncementCenter\AppInfo\Application();
 
-\OC::$server->getActivityManager()->registerExtension(function() use ($app) {
+\OC::$server->getActivityManager()->registerExtension(function () use ($app) {
 	return $app->getContainer()->query('OCA\AnnouncementCenter\Activity\Extension');
 });
 
-\OC::$server->getNotificationManager()->registerNotifier(function() use ($app) {
+\OC::$server->getNotificationManager()->registerNotifier(function () use ($app) {
 	return $app->getContainer()->query('OCA\AnnouncementCenter\Notification\Notifier');
-}, function() use ($app) {
+}, function () use ($app) {
 	$l = $app->getContainer()->getServer()->getL10NFactory()->get('announcementcenter');
 	return [
 		'id' => 'announcementcenter',

@@ -99,7 +99,7 @@ class BackgroundJob extends QueuedJob {
 			->setSubject('announced', [$authorId])
 			->setLink($this->urlGenerator->linkToRoute('announcementcenter.page.index'));
 
-		$this->userManager->callForAllUsers(function(IUser $user) use ($authorId, $event, $notification) {
+		$this->userManager->callForAllUsers(function (IUser $user) use ($authorId, $event, $notification) {
 			$event->setAffectedUser($user->getUID());
 			$this->activityManager->publish($event);
 

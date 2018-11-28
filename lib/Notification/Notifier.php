@@ -21,7 +21,6 @@
 
 namespace OCA\AnnouncementCenter\Notification;
 
-
 use OCA\AnnouncementCenter\Manager;
 use OCP\IUser;
 use OCP\IUserManager;
@@ -76,10 +75,10 @@ class Notifier implements INotifier {
 				}
 
 				$announcement = $this->manager->getAnnouncement($notification->getObjectId(), false);
-				$params[] = str_replace("\n", ' ', $announcement['subject']);
+				$params[] = \str_replace("\n", ' ', $announcement['subject']);
 
 				// only set message if present
-				if(!empty($announcement['message'])) {
+				if (!empty($announcement['message'])) {
 					$notification->setParsedMessage($announcement['message']);
 				}
 

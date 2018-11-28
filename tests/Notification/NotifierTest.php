@@ -55,8 +55,8 @@ class NotifierTest extends TestCase {
 			->getMock();
 		$this->l->expects($this->any())
 			->method('t')
-			->willReturnCallback(function($string, $args) {
-				return vsprintf($string, $args);
+			->willReturnCallback(function ($string, $args) {
+				return \vsprintf($string, $args);
 			});
 		$this->factory = $this->getMockBuilder('OCP\L10N\IFactory')
 			->disableOriginalConstructor()
@@ -189,7 +189,7 @@ class NotifierTest extends TestCase {
 		$subject = 'subject' . "\n<html>";
 		$message = 'message' . "\n<html>";
 		$author = 'author';
-		$time = time() - 10;
+		$time = \time() - 10;
 
 		$announcement = $this->manager->announce($subject, $message, $author, $time);
 		$this->assertInternalType('int', $announcement['id']);

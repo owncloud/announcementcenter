@@ -74,8 +74,8 @@ class PageControllerTest extends TestCase {
 			->getMock();
 		$this->l->expects($this->any())
 			->method('t')
-			->willReturnCallback(function($string, $args) {
-				return vsprintf($string, $args);
+			->willReturnCallback(function ($string, $args) {
+				return \vsprintf($string, $args);
 			});
 		$this->jobList = $this->getMockBuilder('OCP\BackgroundJob\IJobList')
 			->disableOriginalConstructor()
@@ -206,7 +206,6 @@ class PageControllerTest extends TestCase {
 	 * @param int $id
 	 */
 	public function testDelete($id) {
-
 		$notification = $this->getMockBuilder('OCP\Notification\INotification')
 			->disableOriginalConstructor()
 			->getMock();
@@ -239,7 +238,7 @@ class PageControllerTest extends TestCase {
 	public function dataAddThrows() {
 		return [
 			['', ['error' => 'The subject is too long or empty']],
-			[str_repeat('a', 513), ['error' => 'The subject is too long or empty']],
+			[\str_repeat('a', 513), ['error' => 'The subject is too long or empty']],
 		];
 	}
 
@@ -279,7 +278,7 @@ class PageControllerTest extends TestCase {
 				'author' => 'author',
 				'subject' => 'subject',
 				'message' => 'message',
-				'time' => time(),
+				'time' => \time(),
 				'id' => 10,
 			]);
 		$this->userManager->expects($this->once())
