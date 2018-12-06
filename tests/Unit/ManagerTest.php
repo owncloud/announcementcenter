@@ -19,7 +19,7 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests;
+namespace OCA\AnnouncementCenter\Tests\Unit;
 
 use OCA\AnnouncementCenter\Manager;
 

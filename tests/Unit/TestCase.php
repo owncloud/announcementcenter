@@ -19,7 +19,7 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests;
+namespace OCA\AnnouncementCenter\Tests\Unit;
 
 abstract class TestCase extends \Test\TestCase {
 	/** @var array */

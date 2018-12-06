@@ -19,11 +19,11 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests\Notification;
+namespace OCA\AnnouncementCenter\Tests\Unit\Notification;
 
 use OCA\AnnouncementCenter\Notification\Notifier;
 use OCA\AnnouncementCenter\Manager;
-use OCA\AnnouncementCenter\Tests\TestCase;
+use OCA\AnnouncementCenter\Tests\Unit\TestCase;
 use OCP\IL10N;
 use OCP\IUserManager;
 use OCP\L10N\IFactory;

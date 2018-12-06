@@ -19,10 +19,10 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests\Controller;
+namespace OCA\AnnouncementCenter\Tests\Unit\Controller;
 
 use OCA\AnnouncementCenter\Manager;
-use OCA\AnnouncementCenter\Tests\TestCase;
+use OCA\AnnouncementCenter\Tests\Unit\TestCase;
 use OCP\AppFramework\Http;
 use OCP\BackgroundJob\IJobList;
 use OCP\IGroupManager;

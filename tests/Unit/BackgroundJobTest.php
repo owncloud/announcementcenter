@@ -19,11 +19,10 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests;
+namespace OCA\AnnouncementCenter\Tests\Unit;
 
 use OCA\AnnouncementCenter\Manager;
 use OCP\Activity\IManager;
-use OCP\AppFramework\Http;
 use OCP\IURLGenerator;
 use OCP\IUserManager;
 use OCP\Notification\IManager as INotificationManager;

@@ -19,10 +19,10 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests\AppInfo;
+namespace OCA\AnnouncementCenter\Tests\Unit\AppInfo;
 
 use OCA\AnnouncementCenter\AppInfo\Application;
-use OCA\AnnouncementCenter\Tests\TestCase;
+use OCA\AnnouncementCenter\Tests\Unit\TestCase;
 
 /**
  * Class ApplicationTest

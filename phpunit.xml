@@ -2,12 +2,13 @@
 <phpunit bootstrap="../../tests/bootstrap.php"
 		 strict="true"
 		 verbose="true"
+		 failOnWarning="true"
 		 timeoutForSmallTests="900"
 		 timeoutForMediumTests="900"
 		 timeoutForLargeTests="900"
-		>
+>
 	<testsuite name='unit'>
-		<directory suffix='Test.php'>./tests</directory>
+		<directory suffix='Test.php'>./tests/Unit</directory>
 	</testsuite>
 	<!-- filters for code coverage -->
 	<filter>
@@ -21,4 +22,3 @@
 		<log type="coverage-clover" target="./tests/output/clover.xml"/>
 	</logging>
 </phpunit>
-

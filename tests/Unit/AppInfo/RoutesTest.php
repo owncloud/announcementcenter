@@ -19,11 +19,11 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests;
+namespace OCA\AnnouncementCenter\Tests\Unit;
 
 class RoutesTest extends TestCase {
 	public function testRoutes() {
-		$routes = include(__DIR__ . '/../../appinfo/routes.php');
+		$routes = include(__DIR__ . '/../../../appinfo/routes.php');
 		$this->assertInternalType('array', $routes);
 		$this->assertCount(1, $routes);
 		$this->assertArrayHasKey('routes', $routes);

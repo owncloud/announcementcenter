@@ -19,7 +19,7 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests;
+namespace OCA\AnnouncementCenter\Tests\Unit;
 
 /**
  * Class AppTest
@@ -94,7 +94,7 @@ class AppTest extends TestCase {
 				$this->assertInstanceOf('\OCA\AnnouncementCenter\Activity\Extension', $navigation);
 			});
 
-		include(__DIR__ . '/../../appinfo/app.php');
+		include(__DIR__ . '/../../../appinfo/app.php');
 	}
 
 	public function testAppNotification() {
@@ -118,6 +118,6 @@ class AppTest extends TestCase {
 				$this->assertInternalType('string', $info['name']);
 			});
 
-		include(__DIR__ . '/../../appinfo/app.php');
+		include(__DIR__ . '/../../../appinfo/app.php');
 	}
 }

@@ -19,11 +19,11 @@
  *
  */
 
-namespace OCA\AnnouncementCenter\Tests\Activity;
+namespace OCA\AnnouncementCenter\Tests\Unit\Activity;
 
 use OCA\AnnouncementCenter\Activity\Extension;
 use OCA\AnnouncementCenter\Manager;
-use OCA\AnnouncementCenter\Tests\TestCase;
+use OCA\AnnouncementCenter\Tests\Unit\TestCase;
 use OCP\Activity\IExtension;
 use OCP\Activity\IManager;
 use OCP\IL10N;
