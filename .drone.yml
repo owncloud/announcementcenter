@@ -5,7 +5,7 @@ workspace:
 branches: [master, release*, release/*]
 
 pipeline:
-  install-server:
+  install-core:
     image: owncloudci/core
     version: ${OC_VERSION}
     pull: true
@@ -16,7 +16,7 @@ pipeline:
     db_password: owncloud
     when:
       matrix:
-        NEED_SERVER: true
+        NEED_CORE: true
 
   install-app:
     image: owncloudci/php:${PHP_VERSION}
@@ -85,7 +85,6 @@ pipeline:
     image: owncloudci/php:${PHP_VERSION}
     pull: true
     environment:
-      - PHP_VERSION=${PHP_VERSION}
       - COVERAGE=${COVERAGE}
     commands:
       - if [ -z "${COVERAGE}" ]; then make test-php-unit; fi
@@ -98,8 +97,8 @@ pipeline:
     image: plugins/codecov:2
     secrets: [codecov_token]
     pull: true
-    files:
-      - tests/output/clover.xml
+    paths:
+      - tests/output/*.xml
     when:
       matrix:
         COVERAGE: true
@@ -107,11 +106,11 @@ pipeline:
   notify:
     image: plugins/slack:1
     pull: true
-    secrets: [ slack_webhook ]
+    secrets: [slack_webhook]
     channel: builds
     when:
-      status: [ failure, changed ]
-      event: [ push, tag ]
+      status: [failure, changed]
+      event: [push, tag]
 
 services:
   mysql:
@@ -168,24 +167,28 @@ matrix:
     - PHP_VERSION: 7.2
       OC_VERSION: daily-master-qa
       TEST_SUITE: codecheck
+      NEED_CORE: true
       NEED_SERVER: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.2
       OC_VERSION: daily-master-qa
       TEST_SUITE: codecheck-deprecations
+      NEED_CORE: true
       NEED_SERVER: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-stable10-qa
       TEST_SUITE: codecheck
+      NEED_CORE: true
       NEED_SERVER: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-stable10-qa
       TEST_SUITE: codecheck-deprecations
+      NEED_CORE: true
       NEED_SERVER: true
       NEED_INSTALL_APP: true
 
@@ -195,7 +198,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: sqlite
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.1
@@ -203,7 +206,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.1
@@ -211,7 +214,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: pgsql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.1
@@ -219,7 +222,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: oci
       DB_NAME: XE
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.2
@@ -227,7 +230,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 5.6
@@ -235,7 +238,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: sqlite
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 5.6
@@ -243,7 +246,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.0
@@ -251,7 +254,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.0
@@ -259,7 +262,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: pgsql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
       COVERAGE: true
 
@@ -268,7 +271,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: oci
       DB_NAME: XE
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.1
@@ -276,7 +279,7 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
 
     - PHP_VERSION: 7.2
@@ -284,5 +287,5 @@ matrix:
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
-      NEED_SERVER: true
+      NEED_CORE: true
       NEED_INSTALL_APP: true
