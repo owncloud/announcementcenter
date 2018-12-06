@@ -153,7 +153,7 @@ class PageController extends Controller {
 
 		$notification = $this->notificationManager->createNotification();
 		$notification->setApp('announcementcenter')
-			->setObject('announcement', $id);
+			->setObject('announcement', (string) $id);
 		$this->notificationManager->markProcessed($notification);
 
 		return new Response();

@@ -95,7 +95,7 @@ class BackgroundJob extends QueuedJob {
 		$notification = $this->notificationManager->createNotification();
 		$notification->setApp('announcementcenter')
 			->setDateTime($dateTime)
-			->setObject('announcement', $id)
+			->setObject('announcement', (string) $id)
 			->setSubject('announced', [$authorId])
 			->setLink($this->urlGenerator->linkToRoute('announcementcenter.page.index'));
 
