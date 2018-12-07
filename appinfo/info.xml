@@ -6,7 +6,7 @@
 	<description>This application enables admins to notify users about e.g. upcoming maintenance windows or changed features. Notifications are sent via Activity mails, the notification bell in the WebUI and ownCloud clients display them as well.</description>
 	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
-	<version>1.2.0</version>
+	<version>1.2.1</version>
 	<namespace>AnnouncementCenter</namespace>
 
 	<category>tools</category>
@@ -17,7 +17,7 @@
 	<repository type="git">https://github.com/owncloud/announcementcenter.git</repository>
 
 	<dependencies>
-		<owncloud min-version="10.0" max-version="10.1" />
+		<owncloud min-version="10" max-version="10" />
 	</dependencies>
 	<navigation>
 		<route>announcementcenter.page.index</route>
