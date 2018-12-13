@@ -5,7 +5,7 @@ Depends on ['notifications'](https://github.com/owncloud/notifications) backend
 
 ## QA metrics on master branch:
 
-[![Build Status](https://travis-ci.org/owncloud/announcementcenter.svg?branch=master)](https://travis-ci.org/owncloud/announcementcenter)
+[![Build Status](https://drone.owncloud.com/api/badges/owncloud/announcementcenter/status.svg?branch=master)](https://drone.owncloud.com/owncloud/announcementcenter)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/owncloud/announcementcenter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/owncloud/announcementcenter/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/owncloud/announcementcenter/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/owncloud/announcementcenter/?branch=master)
 
