@@ -102,12 +102,6 @@ endif
 ## Tests
 ##--------------------------------------
 
-.PHONY: test-syntax-php
-test-syntax-php:
-	for F in $(shell find . -name \*.php | grep -v -e 'lib/composer' -e 'vendor' -e 'vendor-bin' -e 'l10n'); do \
-		php -l "$$F" > /dev/null || exit $?; \
-	done
-
 .PHONY: test-php-unit
 test-php-unit:             ## Run php unit tests
 test-php-unit: vendor/bin/phpunit
@@ -139,7 +133,7 @@ test-php-phpstan: vendor-bin/phpstan/vendor
 	$(PHPSTAN) analyse --memory-limit=4G --configuration=./phpstan.neon --no-progress --level=5 appinfo lib
 
 .PHONY: test-codecheck
-test-codecheck: test-syntax-php
+test-codecheck:
 	$(occ) app:check-code $(app_name) -c private -c strong-comparison
 
 .PHONY: test-codecheck-deprecations
