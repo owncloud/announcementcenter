@@ -7,7 +7,7 @@ branches: [master, release*, release/*]
 pipeline:
   install-core:
     image: owncloudci/core
-    version: ${OC_VERSION}
+    git_reference: ${GIT_BRANCH}
     pull: true
     db_type: ${DB_TYPE}
     db_name: ${DB_NAME}
@@ -159,22 +159,26 @@ matrix:
     # owncloud coding standard
     - PHP_VERSION: 7.2
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       NEED_CORE: true
       TEST_SUITE: owncloud-coding-standard
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       NEED_CORE: true
       TEST_SUITE: owncloud-coding-standard
 
     - PHP_VERSION: 5.6
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       NEED_CORE: true
       TEST_SUITE: owncloud-coding-standard
 
     # code check tests
     - PHP_VERSION: 7.2
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       TEST_SUITE: codecheck
       NEED_CORE: true
       NEED_SERVER: true
@@ -182,6 +186,7 @@ matrix:
 
     - PHP_VERSION: 7.2
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       TEST_SUITE: codecheck-deprecations
       NEED_CORE: true
       NEED_SERVER: true
@@ -189,6 +194,7 @@ matrix:
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: codecheck
       NEED_CORE: true
       NEED_SERVER: true
@@ -196,6 +202,7 @@ matrix:
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: codecheck-deprecations
       NEED_CORE: true
       NEED_SERVER: true
@@ -204,6 +211,7 @@ matrix:
     # Unit Tests
     - PHP_VERSION: 7.1
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: sqlite
       DB_NAME: owncloud
@@ -212,6 +220,7 @@ matrix:
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
@@ -220,6 +229,7 @@ matrix:
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: pgsql
       DB_NAME: owncloud
@@ -228,6 +238,7 @@ matrix:
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: oci
       DB_NAME: XE
@@ -236,6 +247,7 @@ matrix:
 
     - PHP_VERSION: 7.2
       OC_VERSION: daily-master-qa
+      GIT_BRANCH: provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
@@ -244,6 +256,7 @@ matrix:
 
     - PHP_VERSION: 5.6
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: sqlite
       DB_NAME: owncloud
@@ -252,6 +265,7 @@ matrix:
 
     - PHP_VERSION: 5.6
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
@@ -260,6 +274,7 @@ matrix:
 
     - PHP_VERSION: 7.0
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
@@ -268,6 +283,7 @@ matrix:
 
     - PHP_VERSION: 7.0
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: pgsql
       DB_NAME: owncloud
@@ -277,6 +293,7 @@ matrix:
 
     - PHP_VERSION: 7.0
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: oci
       DB_NAME: XE
@@ -285,6 +302,7 @@ matrix:
 
     - PHP_VERSION: 7.1
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
@@ -293,6 +311,7 @@ matrix:
 
     - PHP_VERSION: 7.2
       OC_VERSION: daily-stable10-qa
+      GIT_BRANCH: stable10-provide-common-makefiles
       TEST_SUITE: phpunit
       DB_TYPE: mysql
       DB_NAME: owncloud
