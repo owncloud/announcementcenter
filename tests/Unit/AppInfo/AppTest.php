@@ -28,17 +28,17 @@ namespace OCA\AnnouncementCenter\Tests\Unit;
  * @group DB
  */
 class AppTest extends TestCase {
-	/** @var \OCP\INavigationManager|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var \OCP\INavigationManager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $navigationManager;
-	/** @var \OCP\IURLGenerator|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var \OCP\IURLGenerator|\PHPUnit\Framework\MockObject\MockObject */
 	protected $urlGenerator;
-	/** @var \OCP\IL10N|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var \OCP\IL10N|\PHPUnit\Framework\MockObject\MockObject */
 	protected $language;
-	/** @var \OCP\L10N\IFactory|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var \OCP\L10N\IFactory|\PHPUnit\Framework\MockObject\MockObject */
 	protected $languageFactory;
-	/** @var \OCP\Notification\IManager|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var \OCP\Notification\IManager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $notificationManager;
-	/** @var \OCP\Activity\IManager|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var \OCP\Activity\IManager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $activityManager;
 
 	protected function setUp() {

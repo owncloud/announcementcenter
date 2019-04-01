@@ -39,19 +39,19 @@ use OCP\Notification\IManager as INotificationManager;
  * @group DB
  */
 class PageControllerTest extends TestCase {
-	/** @var IRequest|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IRequest|\PHPUnit\Framework\MockObject\MockObject */
 	protected $request;
-	/** @var IGroupManager|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IGroupManager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $groupManager;
-	/** @var IUserManager|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IUserManager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $userManager;
-	/** @var IJobList|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IJobList|\PHPUnit\Framework\MockObject\MockObject */
 	protected $jobList;
-	/** @var INotificationManager|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var INotificationManager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $notificationManager;
-	/** @var IL10N|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IL10N|\PHPUnit\Framework\MockObject\MockObject */
 	protected $l;
-	/** @var Manager|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var Manager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $manager;
 
 	protected function setUp() {
