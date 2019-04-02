@@ -113,7 +113,9 @@ class NotifierTest extends TestCase {
 	 * @return \OCP\IUser|\PHPUnit\Framework\MockObject\Builder\InvocationMocker
 	 */
 	protected function getUserMock() {
-		$user = $this->getMock('OCP\IUser');
+		$user = $this->getMockBuilder('OCP\IUser')
+			->disableOriginalConstructor()
+			->getMock();
 		$user->expects($this->once())
 			->method('getDisplayName')
 			->willReturn('Author');
