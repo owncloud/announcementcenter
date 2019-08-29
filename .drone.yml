@@ -126,13 +126,13 @@ steps:
     db_password: owncloud
     db_type: sqlite
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.0
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -192,13 +192,13 @@ steps:
     db_password: owncloud
     db_type: mysql
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.0
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -268,13 +268,13 @@ steps:
     db_password: owncloud
     db_type: mysql
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.0
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -344,13 +344,13 @@ steps:
     db_password: owncloud
     db_type: mysql
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.0
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -420,13 +420,13 @@ steps:
     db_password: owncloud
     db_type: pgsql
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.0
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -495,13 +495,13 @@ steps:
     db_password: oracle
     db_type: oci
     db_username: system
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.0
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -571,13 +571,13 @@ steps:
     db_password: owncloud
     db_type: sqlite
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.1
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -628,13 +628,13 @@ steps:
     db_password: owncloud
     db_type: mysql
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.1
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -695,13 +695,13 @@ steps:
     db_password: owncloud
     db_type: sqlite
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.2
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -752,13 +752,13 @@ steps:
     db_password: owncloud
     db_type: mysql
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.2
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -819,13 +819,13 @@ steps:
     db_password: owncloud
     db_type: sqlite
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.3
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
@@ -876,13 +876,13 @@ steps:
     db_password: owncloud
     db_type: mysql
     db_username: owncloud
+    exclude: apps/announcementcenter
     version: daily-master-qa
 
 - name: setup-server-announcementcenter
   pull: always
   image: owncloudci/php:7.3
   commands:
-  - ":"
   - cd /var/www/owncloud/server
   - php occ a:l
   - php occ a:e announcementcenter
