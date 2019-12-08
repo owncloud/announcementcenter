@@ -54,7 +54,7 @@ class PageControllerTest extends TestCase {
 	/** @var Manager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $manager;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->request = $this->getMockBuilder('OCP\IRequest')

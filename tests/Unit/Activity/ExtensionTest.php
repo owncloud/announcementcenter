@@ -41,7 +41,7 @@ class ExtensionTest extends TestCase {
 	/** @var Extension */
 	protected $extension;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->manager = $this->getMockBuilder('OCA\AnnouncementCenter\Manager')

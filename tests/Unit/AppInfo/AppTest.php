@@ -41,7 +41,7 @@ class AppTest extends TestCase {
 	/** @var \OCP\Activity\IManager|\PHPUnit\Framework\MockObject\MockObject */
 	protected $activityManager;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->navigationManager = $this->getMockBuilder('OCP\INavigationManager')
@@ -75,7 +75,7 @@ class AppTest extends TestCase {
 		$this->overwriteService('L10NFactory', $this->languageFactory);
 	}
 
-	protected function tearDown() {
+	protected function tearDown(): void {
 		$this->restoreService('NavigationManager');
 		$this->restoreService('NotificationManager');
 		$this->restoreService('ActivityManager');
