@@ -41,7 +41,7 @@ class NotifierTest extends TestCase {
 	/** @var IL10N|\PHPUnit\Framework\MockObject\MockObject */
 	protected $l;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->manager = $this->getMockBuilder('OCA\AnnouncementCenter\Manager')
