@@ -24,10 +24,10 @@ namespace OCA\AnnouncementCenter\Tests\Unit;
 class RoutesTest extends TestCase {
 	public function testRoutes() {
 		$routes = include(__DIR__ . '/../../../appinfo/routes.php');
-		$this->assertInternalType('array', $routes);
+		$this->assertIsArray($routes);
 		$this->assertCount(1, $routes);
 		$this->assertArrayHasKey('routes', $routes);
-		$this->assertInternalType('array', $routes['routes']);
+		$this->assertIsArray($routes['routes']);
 		$this->assertGreaterThanOrEqual(1, \sizeof($routes['routes']));
 	}
 }
