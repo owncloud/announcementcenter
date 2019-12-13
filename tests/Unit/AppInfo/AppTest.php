@@ -111,11 +111,11 @@ class AppTest extends TestCase {
 				$this->assertInstanceOf('\OCA\AnnouncementCenter\Notification\Notifier', $notifier);
 				$this->assertInstanceOf('\Closure', $closureInfo);
 				$info = $closureInfo();
-				$this->assertInternalType('array', $info);
+				$this->assertIsArray($info);
 				$this->assertArrayHasKey('id', $info);
-				$this->assertInternalType('string', $info['id']);
+				$this->assertIsString($info['id']);
 				$this->assertArrayHasKey('name', $info);
-				$this->assertInternalType('string', $info['name']);
+				$this->assertIsString($info['name']);
 			});
 
 		include(__DIR__ . '/../../../appinfo/app.php');

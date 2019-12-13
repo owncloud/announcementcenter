@@ -296,7 +296,7 @@ class PageControllerTest extends TestCase {
 		$this->assertInstanceOf('OCP\AppFramework\Http\JSONResponse', $response);
 		$data = $response->getData();
 		$this->assertArrayHasKey('time', $data);
-		$this->assertInternalType('int', $data['time']);
+		$this->assertIsInt($data['time']);
 		unset($data['time']);
 		$this->assertEquals([
 			'author' => 'Author',

@@ -73,9 +73,10 @@ class NotifierTest extends TestCase {
 	}
 
 	/**
-	 * @expectedException \InvalidArgumentException
 	 */
 	public function testPrepareWrongApp() {
+		$this->expectException(\InvalidArgumentException::class);
+
 		/** @var \OCP\Notification\INotification|\PHPUnit\Framework\MockObject\MockObject $notification */
 		$notification = $this->getMockBuilder('OCP\Notification\INotification')
 			->disableOriginalConstructor()
@@ -91,9 +92,10 @@ class NotifierTest extends TestCase {
 	}
 
 	/**
-	 * @expectedException \InvalidArgumentException
 	 */
 	public function testPrepareWrongSubject() {
+		$this->expectException(\InvalidArgumentException::class);
+
 		/** @var \OCP\Notification\INotification|\PHPUnit\Framework\MockObject\MockObject $notification */
 		$notification = $this->getMockBuilder('OCP\Notification\INotification')
 			->disableOriginalConstructor()
@@ -194,7 +196,7 @@ class NotifierTest extends TestCase {
 		$time = \time() - 10;
 
 		$announcement = $this->manager->announce($subject, $message, $author, $time);
-		$this->assertInternalType('int', $announcement['id']);
+		$this->assertIsInt($announcement['id']);
 		$this->assertGreaterThan(0, $announcement['id']);
 		$this->assertSame('subject &lt;html&gt;', $announcement['subject']);
 		$this->assertSame('message<br />&lt;html&gt;', $announcement['message']);

@@ -41,28 +41,31 @@ class ManagerTest extends TestCase {
 	}
 
 	/**
-	 * @expectedException \InvalidArgumentException
 	 * @expectedMessage Invalid ID
 	 */
 	public function testGetAnnouncementNotExist() {
+		$this->expectException(\InvalidArgumentException::class);
+
 		$this->manager->getAnnouncement(0);
 	}
 
 	/**
-	 * @expectedException \InvalidArgumentException
 	 * @expectedMessage Invalid subject
 	 * @expectedCode 2
 	 */
 	public function testAnnounceNoSubject() {
+		$this->expectException(\InvalidArgumentException::class);
+
 		$this->manager->announce('', '', '', 0);
 	}
 
 	/**
-	 * @expectedException \InvalidArgumentException
 	 * @expectedMessage Invalid subject
 	 * @expectedCode 1
 	 */
 	public function testAnnounceSubjectTooLong() {
+		$this->expectException(\InvalidArgumentException::class);
+
 		$this->manager->announce(\str_repeat('a', 513), '', '', 0);
 	}
 
@@ -73,7 +76,7 @@ class ManagerTest extends TestCase {
 		$time = \time() - 10;
 
 		$announcement = $this->manager->announce($subject, $message, $author, $time);
-		$this->assertInternalType('int', $announcement['id']);
+		$this->assertIsInt($announcement['id']);
 		$this->assertGreaterThan(0, $announcement['id']);
 		$this->assertSame('subject &lt;html&gt;', $announcement['subject']);
 		$this->assertSame('message<br />&lt;html&gt;', $announcement['message']);
