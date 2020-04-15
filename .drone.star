@@ -19,6 +19,8 @@ config = {
 		},
 	},
 
+	'phpstan': True,
+
 	'phpunit': {
 		'allDatabases' : {
 			'phpVersions': [
@@ -35,7 +37,7 @@ config = {
 				'mariadb:10.2',
 			],
 			'coverage': False
-		},
+		}
 	}
 }
 
