@@ -74,7 +74,7 @@ class Notifier implements INotifier {
 					$params[0] = $user->getDisplayName();
 				}
 
-				$announcement = $this->manager->getAnnouncement($notification->getObjectId(), false);
+				$announcement = $this->manager->getAnnouncement((int)$notification->getObjectId(), false);
 				$params[] = \str_replace("\n", ' ', $announcement['subject']);
 
 				// only set message if present

@@ -17,12 +17,14 @@ source_package_name=$(source_build_directory)/$(app_name)
 appstore_build_directory=$(CURDIR)/build/artifacts/appstore
 appstore_package_name=$(appstore_build_directory)/$(app_name)
 npm=$(shell which npm 2> /dev/null)
+build_dir=$(CURDIR)/build
+dist_dir=$(build_dir)/dist
 
 # dependency folders (leave empty if not required)
-composer_deps=
-composer_dev_deps=
-nodejs_deps=
+nodejs_deps=node_modules
 bower_deps=
+composer_deps=vendor
+composer_dev_deps=
 
 # signing
 occ=$(CURDIR)/../../occ
@@ -53,8 +55,7 @@ help:
 
 # Removes the appstore build
 .PHONY: clean
-clean:
-	rm -rf ./build/artifacts
+clean: clean-deps clean-dist clean-build
 
 # Builds the source and appstore package
 .PHONY: dist
@@ -139,6 +140,19 @@ test-codecheck:
 .PHONY: test-codecheck-deprecations
 test-codecheck-deprecations:
 	$(occ) app:check-code $(app_name) -c deprecation
+
+.PHONY: clean-dist
+clean-dist:
+	rm -Rf $(dist_dir)
+
+.PHONY: clean-build
+clean-build:
+	rm -Rf $(build_dir)
+
+.PHONY: clean-deps
+clean-deps:
+	rm -Rf $(nodejs_deps) $(bower_deps) $(composer_deps)
+	rm -Rf vendor-bin/**/vendor vendor-bin/**/composer.lock
 
 #
 # Dependency management
