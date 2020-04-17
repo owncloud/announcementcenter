@@ -21,6 +21,8 @@ config = {
 
 	'phpstan': True,
 
+	'phan': True,
+
 	'phpunit': {
 		'allDatabases' : {
 			'phpVersions': [
