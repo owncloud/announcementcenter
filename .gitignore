@@ -61,3 +61,4 @@ vendor-bin/**/vendor
 
 # Tests - auto-generated files
 /tests/output
+.phpunit.result.cache
