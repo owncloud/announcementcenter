@@ -6,6 +6,7 @@ OC.L10N.register(
     "Announcing…" : "اعلام كردن…",
     "Announced!" : "اعلام شد!",
     "Announcement does not exist anymore" : "اطلاعیه دیگر وجود ندارد",
+    "You announced %s" : "شما اعلام کردید %s",
     "The subject is too long or empty" : "موضوع زیادی بلند است یا خالی است",
     "No Announcements" : "بدون اطلاعیه",
     "There are currently no announcements…" : "در حال حاضر هیچ اطلاعیه ای وجود ندارد",
