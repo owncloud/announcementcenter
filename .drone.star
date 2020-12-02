@@ -52,8 +52,11 @@ def main(ctx):
 
 	dependsOn(before, stages)
 
-	afterCoverageTests = afterCoveragePipelines(ctx)
-	dependsOn(coverageTests, afterCoverageTests)
+	if (coverageTests == []):
+		afterCoverageTests = []
+	else:
+		afterCoverageTests = afterCoveragePipelines(ctx)
+		dependsOn(coverageTests, afterCoverageTests)
 
 	after = afterPipelines(ctx)
 	dependsOn(afterCoverageTests + stages, after)
