@@ -3,6 +3,8 @@
 An Announcement Center app for ownCloud (allows administrators to publish announcements for users)  
 Depends on ['notifications'](https://github.com/owncloud/notifications) backend
 
+Trigger CI
+
 ## QA metrics on master branch:
 
 [![Build Status](https://drone.owncloud.com/api/badges/owncloud/announcementcenter/status.svg?branch=master)](https://drone.owncloud.com/owncloud/announcementcenter)
