@@ -1416,6 +1416,12 @@ def setupServerAndApp(phpVersion, logLevel):
 		'image': 'owncloudci/php:%s' % phpVersion,
 		'pull': 'always',
 		'commands': [
+			'pwd',
+			'ls -l',
+			'ls -l /var',
+			'ls -l /var/www',
+			'ls -l /var/www/owncloud',
+			'ls -l /var/www/owncloud/server',
 			'cd /var/www/owncloud/server',
 			'php occ a:l',
 			'php occ a:e %s' % config['app'],
