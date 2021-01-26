@@ -6,8 +6,9 @@ Depends on ['notifications'](https://github.com/owncloud/notifications) backend
 ## QA metrics on master branch:
 
 [![Build Status](https://drone.owncloud.com/api/badges/owncloud/announcementcenter/status.svg?branch=master)](https://drone.owncloud.com/owncloud/announcementcenter)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/owncloud/announcementcenter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/owncloud/announcementcenter/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/owncloud/announcementcenter/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/owncloud/announcementcenter/?branch=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=owncloud_announcementcenter&metric=alert_status)](https://sonarcloud.io/dashboard?id=owncloud_announcementcenter)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=owncloud_announcementcenter&metric=security_rating)](https://sonarcloud.io/dashboard?id=owncloud_announcementcenter)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=owncloud_announcementcenter&metric=coverage)](https://sonarcloud.io/dashboard?id=owncloud_announcementcenter)
 
 ---
 
