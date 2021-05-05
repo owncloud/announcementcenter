@@ -78,7 +78,9 @@ class Manager {
 			->setParameter('time', (int) $time)
 			->setParameter('user', $user);
 		$result = $query->execute();
+		/* @phan-suppress-next-line PhanDeprecatedFunction */
 		$row = $result->fetch();
+		/* @phan-suppress-next-line PhanDeprecatedFunction */
 		$result->closeCursor();
 
 		return [
@@ -114,7 +116,9 @@ class Manager {
 			->where($queryBuilder->expr()->eq('announcement_id', $queryBuilder->createParameter('id')))
 			->setParameter('id', (int) $id);
 		$result = $query->execute();
+		/* @phan-suppress-next-line PhanDeprecatedFunction */
 		$row = $result->fetch();
+		/* @phan-suppress-next-line PhanDeprecatedFunction */
 		$result->closeCursor();
 
 		if ($row === false) {
@@ -150,6 +154,7 @@ class Manager {
 		$result = $query->execute();
 
 		$announcements = [];
+		/* @phan-suppress-next-line PhanDeprecatedFunction */
 		while ($row = $result->fetch()) {
 			$announcements[] = [
 				'id'		=> (int) $row['announcement_id'],
@@ -159,6 +164,7 @@ class Manager {
 				'message'	=> ($parseStrings) ? $this->parseMessage($row['announcement_message']) : $row['announcement_message'],
 			];
 		}
+		/* @phan-suppress-next-line PhanDeprecatedFunction */
 		$result->closeCursor();
 
 		return $announcements;
