@@ -83,8 +83,8 @@ class Notifier implements INotifier {
 				}
 
 				$notification->setParsedSubject(
-						(string) $l->t('%1$s announced “%2$s”', $params)
-					);
+					(string) $l->t('%1$s announced “%2$s”', $params)
+				);
 
 				return $notification;
 
