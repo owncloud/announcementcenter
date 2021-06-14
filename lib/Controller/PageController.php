@@ -38,7 +38,7 @@ use OCP\Notification\IManager as INotificationManager;
 
 class PageController extends Controller {
 	/** @var int */
-	const PAGE_LIMIT = 5;
+	public const PAGE_LIMIT = 5;
 
 	/** @var INotificationManager */
 	protected $notificationManager;
