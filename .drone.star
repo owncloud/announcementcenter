@@ -21,13 +21,7 @@ config = {
     "codestyle": True,
     "phpstan": True,
     "phan": True,
-    "phpunit": {
-        "allDatabases": {
-            "phpVersions": [
-                "7.4",
-            ],
-        },
-    },
+    "phpunit": True,
 }
 
 def main(ctx):
