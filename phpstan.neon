@@ -3,3 +3,6 @@ parameters:
   bootstrapFiles:
     - %currentWorkingDirectory%/../../lib/base.php
   ignoreErrors:
+    -
+      message: '#Property OCA\\AnnouncementCenter\\Controller\\PageController::\$connection is never read, only written.#'
+      path: lib/Controller/PageController.php
