@@ -197,7 +197,7 @@ def jscodestyle(ctx):
         "steps": [
             {
                 "name": "coding-standard-js",
-                "image": "owncloudci/nodejs:14",
+                "image": OC_CI_NODEJS,
                 "pull": "always",
                 "commands": [
                     "make test-js-style",
@@ -1168,7 +1168,7 @@ def sonarAnalysis(ctx, phpVersion = "7.4"):
         "steps": [
                      {
                          "name": "clone",
-                         "image": "owncloudci/alpine:latest",
+                         "image": OC_CI_ALPINE,
                          "commands": [
                              "git clone https://github.com/%s.git ." % repo_slug,
                              "git checkout $DRONE_COMMIT",
