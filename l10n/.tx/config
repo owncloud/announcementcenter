@@ -7,4 +7,3 @@ file_filter = <lang>/announcementcenter.po
 source_file = templates/announcementcenter.pot
 source_lang = en
 type = PO
-
