@@ -15,6 +15,6 @@ OC.L10N.register(
     "Add announcement" : "Добавяне на съобщение",
     "Subject…" : "Тема...",
     "Your announcement…" : "Вашето съобщение...",
-    "Announce" : "Уведомление"
+    "Announce" : "Обявете"
 },
 "nplurals=2; plural=(n != 1);");
