@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Announcements" : "Съобщения",
     "Delete" : "Изтриване",
-    "Announcing…" : "Съобщаване...",
+    "Announcing…" : "Обявяване...",
     "Announced!" : "Обявено!",
     "Announcement does not exist anymore" : "Съобщението вече не съществува",
     "You announced %s" : "Съобщихте %s",
@@ -13,7 +13,7 @@ OC.L10N.register(
     "No Announcements" : "Няма съобщения",
     "There are currently no announcements…" : "В момента няма съобщения...",
     "Add announcement" : "Добавяне на съобщение",
-    "Subject…" : "Тема...",
+    "Subject…" : "Предмет…",
     "Your announcement…" : "Вашето съобщение...",
     "Announce" : "Обявете"
 },
