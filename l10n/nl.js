@@ -11,7 +11,7 @@ OC.L10N.register(
     "The subject is too long or empty" : "Het onderwerp is te lang of leeg",
     "%1$s announced “%2$s”" : "%1$s meldde “%2$s”",
     "No Announcements" : "Geen aankondigingen",
-    "There are currently no announcements…" : "Er zijn nu geen aankondigingen...",
+    "There are currently no announcements…" : "Er zijn momenteel geen aankondigingen...",
     "Add announcement" : "Aankondiging toevoegen",
     "Subject…" : "Onderwerp...",
     "Your announcement…" : "Uw aankondiging...",
