@@ -1,0 +1,18 @@
+{ "translations": {
+    "Announcements" : "ປະກາດ",
+    "Delete" : "ລຶບ",
+    "Announcing…" : "ກຳລັງປະກາດ...",
+    "Announced!" : "ປະກາດແລ້ວ!",
+    "Announcement does not exist anymore" : "ປະກາດນີ້ບໍ່ມີອີກແລ້ວ",
+    "You announced %s" : "ທ່ານໄດ້ປະກາດ %s",
+    "%s announced %s" : "%s ໄດ້ປະກາດ %s",
+    "The subject is too long or empty" : "ຫົວຂໍ້ຍາວເກີນໄປ ຫຼື ວ່າງເປົ່າ",
+    "%1$s announced “%2$s”" : "%1$s ໄດ້ປະກາດ “%2$s”",
+    "No Announcements" : "ບໍ່ມີປະກາດ",
+    "There are currently no announcements…" : "ຕອນນີ້ຍັງບໍ່ມີປະກາດ...",
+    "Add announcement" : "ເພີ່ມປະກາດ",
+    "Subject…" : "ຫົວຂໍ້...",
+    "Your announcement…" : "ປະກາດຂອງທ່ານ...",
+    "Announce" : "ປະກາດ"
+},"pluralForm" :"nplurals=1; plural=0;"
+}
