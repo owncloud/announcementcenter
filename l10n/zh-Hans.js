@@ -1,6 +1,7 @@
-{ "translations": {
+OC.L10N.register(
+    "announcementcenter",
+    {
     "Announcements" : "通告",
-    "Delete" : "刪除",
     "Announcing…" : "通告發佈中…",
     "Announced!" : "通告已發佈！",
     "Announcement does not exist anymore" : "通告已不存在",
@@ -14,5 +15,5 @@
     "Subject…" : "主旨…",
     "Your announcement…" : "你的通告…",
     "Announce" : "發佈"
-},"pluralForm" :"nplurals=1; plural=0;"
-}
+},
+"nplurals=1; plural=0;");
