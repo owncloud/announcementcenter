@@ -2,6 +2,7 @@ OC.L10N.register(
     "announcementcenter",
     {
     "Announcements" : "Announcements",
+    "Delete" : "Delete",
     "Announcing…" : "Announcing…",
     "Announced!" : "Announced!",
     "Announcement does not exist anymore" : "Announcement does not exist anymore",
