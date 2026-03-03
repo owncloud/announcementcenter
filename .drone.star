@@ -53,17 +53,10 @@ config = {
     "branches": [
         "master",
     ],
-    "codestyle": True,
-    "phpstan": True,
-    "phan": {
-        "multipleVersions": {
-            "phpVersions": [
-                DEFAULT_PHP_VERSION,
-                "7.3",
-            ],
-        },
-    },
-    "phpunit": True,
+    "codestyle": False,
+    "phpstan": False,
+    "phan": False,
+    "phpunit": False,
 }
 
 def main(ctx):

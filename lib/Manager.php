@@ -78,10 +78,8 @@ class Manager {
 			->setParameter('time', (int) $time)
 			->setParameter('user', $user);
 		$result = $query->execute();
-		/* @phan-suppress-next-line PhanDeprecatedFunction */
-		$row = $result->fetch();
-		/* @phan-suppress-next-line PhanDeprecatedFunction */
-		$result->closeCursor();
+		$row = $result->fetchAssociative();
+		$result->free();
 
 		return [
 			'id'		=> (int) $row['announcement_id'],
@@ -116,10 +114,8 @@ class Manager {
 			->where($queryBuilder->expr()->eq('announcement_id', $queryBuilder->createParameter('id')))
 			->setParameter('id', (int) $id);
 		$result = $query->execute();
-		/* @phan-suppress-next-line PhanDeprecatedFunction */
-		$row = $result->fetch();
-		/* @phan-suppress-next-line PhanDeprecatedFunction */
-		$result->closeCursor();
+		$row = $result->fetchAssociative();
+		$result->free();
 
 		if ($row === false) {
 			throw new \InvalidArgumentException('Invalid ID');
@@ -154,8 +150,7 @@ class Manager {
 		$result = $query->execute();
 
 		$announcements = [];
-		/* @phan-suppress-next-line PhanDeprecatedFunction */
-		while ($row = $result->fetch()) {
+		while ($row = $result->fetchAssociative()) {
 			$announcements[] = [
 				'id'		=> (int) $row['announcement_id'],
 				'author'	=> $row['announcement_user'],
@@ -164,8 +159,7 @@ class Manager {
 				'message'	=> ($parseStrings) ? $this->parseMessage($row['announcement_message']) : $row['announcement_message'],
 			];
 		}
-		/* @phan-suppress-next-line PhanDeprecatedFunction */
-		$result->closeCursor();
+		$result->free();
 
 		return $announcements;
 	}
