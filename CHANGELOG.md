@@ -7,6 +7,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ## [Unreleased] - XXXX-XX-XX
 
 
+## [1.3.1] - 2026-07-22
+
+### Changed
+- Maintenance release re-signed with the ownCloud G2 code-signing certificate for the ownCloud 11.0.0 release.
+
+## [1.3.0] - 2026-06-29
+
+### Changed
+- ownCloud 11 compatible release (oc 11.0.0-rc1).
 
 ## [1.2.2] - 2021-06-18
 
@@ -33,7 +42,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 - Allow announcements without messages - [#86](https://github.com/owncloud/announcementcenter/pull/86)
 
-[Unreleased]: https://github.com/owncloud/announcementcenter/compare/v1.2.2...master
+[Unreleased]: https://github.com/owncloud/announcementcenter/compare/v1.3.1..master
+[1.3.1]: https://github.com/owncloud/announcementcenter/compare/v1.3.0..v1.3.1
+[1.3.0]: https://github.com/owncloud/announcementcenter/compare/v1.2.2..v1.3.0
 [1.2.2]: https://github.com/owncloud/announcementcenter/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/owncloud/announcementcenter/compare/v1.2.0...v1.2.1
-
